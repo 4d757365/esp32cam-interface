@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1010</width>
+    <height>647</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>ESP32 Interface</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="face_btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>550</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="text">
+     <string>Start Face Detection</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="obj_btn">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>550</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start Object Detection</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="close_btn">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>50</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pic_btn">
+    <property name="geometry">
+     <rect>
+      <x>830</x>
+      <y>110</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Take Picture</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="brt_slider">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>200</y>
+      <width>71</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="blur_slider">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>200</y>
+      <width>71</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="brtLabel">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>470</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Brightness</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="blurLabel">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>470</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Blur</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>640</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/dogs2.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cif_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>52</y>
+      <width>118</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>CIF (400x296)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="vga_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>91</y>
+      <width>118</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>VGA(640X480)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="svga_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>130</y>
+      <width>118</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SVGA(800x600)</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="red_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>232</y>
+      <width>118</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Red Tint</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="green_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>271</y>
+      <width>118</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Green Tint</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="blue_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>310</y>
+      <width>118</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Blue Tint</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="firebase_btn">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>550</y>
+      <width>221</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Capture and Save to Firebase</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="resolution_label">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>20</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Resolution</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="special_label">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>200</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Special Effects</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="vflip_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>390</y>
+      <width>118</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>V-Flip</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="hflip_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>430</y>
+      <width>118</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>H-Flip</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="negative_btn">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>350</y>
+      <width>118</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>Negative</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="main_label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>161</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Main Controls</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
